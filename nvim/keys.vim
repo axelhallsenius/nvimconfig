@@ -1,11 +1,27 @@
 "Here goes settings for keybindings
 
+"set space to leader
+
+map <Space> <leader>
+
 "random quick keybinds
 
 imap hh <Esc><Esc> 
-vmap hh <Esc><Esc> 
 
+nnoremap <A-l> <C-w>l
+nnoremap <A-l> <C-w>l
+vnoremap <A-l> <C-w>l
+inoremap <A-h> <C-w>h
+nnoremap <A-h> <C-w>h
+vnoremap <A-h> <C-w>h
 
+inoremap <A-k> :bn<CR>
+nnoremap <A-k> :bn<CR>
+vnoremap <A-k> :bn<CR>
+
+inoremap <A-j> :bp<CR>
+nnoremap <A-j> :bp<CR>
+vnoremap <A-j> :bp<CR>
 
 " plugin specific keybinds
 
@@ -148,4 +164,3 @@ nnoremap <leader>P "+P
 vnoremap <leader>P "+P
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
-nnoremap <leader>Y "+y$
