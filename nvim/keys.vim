@@ -1,6 +1,9 @@
 "Here goes settings for keybindings
 
+"random quick keybinds
 
+imap hh <Esc><Esc> 
+vmap hh <Esc><Esc> 
 
 
 
@@ -127,4 +130,22 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+"nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+"easymotion - easymove
+" Move to char
+map ä <Plug>(easymotion-bd-f)
+nmap ä <Plug>(easymotion-overwin-f)
+
+"change ö to : in normal mode, for quick access
+nmap ö :
+
+"system clipboard paste and yank TODO
+nnoremap <leader>p "+p
+vnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>P "+P
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y "+y$

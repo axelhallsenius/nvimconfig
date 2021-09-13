@@ -11,5 +11,6 @@ source $HOME/.config/nvim/keys.vim
 "here are some other things for quick access
 
 "colorscheme:
-set background=dark
-colorscheme vim-material
+"set background=dark
+colorscheme deus
+let g:airline_theme='deus'

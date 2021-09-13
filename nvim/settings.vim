@@ -19,27 +19,26 @@ set termguicolors
 "plugin settings
 "tree sitter
 
-"consistent syntax highlighting
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    custom_captures = {
-      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
-      ["foo.bar"] = "Identifier",
-    },
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
-}
-EOF
+""consistent syntax highlighting
+"lua <<EOF
+"require'nvim-treesitter.configs'.setup {
+"  highlight = {
+"    enable = true,
+"    custom_captures = {
+"      ["foo.bar"] = ''Identifier'?????',
+"    },
+"    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+"    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+"    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+"    -- Instead of true it can also be a list of languages
+"    additional_vim_regex_highlighting = false,
+"  },
+"}
+"EOF
 
 "tree sitter based folding
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
+"set foldmethod=expr
+"set foldexpr=nvim_treesitter#foldexpr()
 
 "coc settings
 
@@ -55,7 +54,7 @@ set nobackup
 set nowritebackup
 
 " Give more space for displaying messages.
-set cmdheight=2
+set cmdheight=1
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
@@ -86,4 +85,15 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+"Enables tabline and airline
+set noshowmode
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+
+"if any file in the nvim folder is writen to, source current neovide session
+"from configs TODO
+"if $=*.vim
+
 

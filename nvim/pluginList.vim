@@ -10,10 +10,20 @@ call plug#begin('~/.config/nvim/plugs')
 Plug 'vimwiki/vimwiki'
 "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+
+Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
+Plug 'easymotion/vim-easymotion'
+
+Plug 'tpope/vim-fugitive'
+
+"Plug ''
 " -- graphical/colorschemes
 "colorscheme material
 Plug 'hzchirs/vim-material'
+Plug 'ajmwagar/vim-deus'
 
 call plug#end()
