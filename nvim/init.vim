@@ -14,3 +14,9 @@ source $HOME/.config/nvim/keys.vim
 "set background=dark
 colorscheme deus
 let g:airline_theme='deus'
+
+"show relative line numbers
+set number
+
+"tab behaviour
+"set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab

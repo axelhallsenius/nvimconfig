@@ -27,7 +27,14 @@ Plug 'tpope/vim-fugitive'
 "distraction free mode
 Plug 'junegunn/goyo.vim'
 
+"nice looking directory tree
+Plug 'preservim/nerdtree'
 
+"fuzzy directory search
+Plug 'ctrlpvim/ctrlp.vim'
+
+"Smooth scrolling so your eyes don't bleed
+Plug 'psliwka/vim-smoothie'
 
 " -- colorschemes --
 

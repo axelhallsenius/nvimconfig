@@ -10,18 +10,24 @@ imap hh <Esc><Esc>
 
 nnoremap <A-l> <C-w>l
 nnoremap <A-l> <C-w>l
-vnoremap <A-l> <C-w>l
+nnoremap <A-l> <C-w>l
+nnoremap <A-j> <C-w>j
+vnoremap <A-j> <C-w>j
+nnoremap <A-j> <C-w>j
+vnoremap <A-k> <C-w>k
+nnoremap <A-k> <C-w>k
+vnoremap <A-k> <C-w>k
 inoremap <A-h> <C-w>h
 nnoremap <A-h> <C-w>h
 vnoremap <A-h> <C-w>h
 
-inoremap <A-k> :bn<CR>
-nnoremap <A-k> :bn<CR>
-vnoremap <A-k> :bn<CR>
+inoremap <C-A-k> :bn<CR>
+nnoremap <C-A-k> :bn<CR>
+vnoremap <C-A-k> :bn<CR>
 
-inoremap <A-j> :bp<CR>
-nnoremap <A-j> :bp<CR>
-vnoremap <A-j> :bp<CR>
+inoremap <C-A-j> :bp<CR>
+nnoremap <C-A-j> :bp<CR>
+vnoremap <C-A-j> :bp<CR>
 
 " plugin specific keybinds
 
@@ -157,10 +163,14 @@ nmap ä <Plug>(easymotion-overwin-f)
 "change ö to : in normal mode, for quick access
 nmap ö :
 
-"system clipboard paste and yank TODO
+"system clipboard paste and yank
 nnoremap <leader>p "+p
 vnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>P "+P
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
+
+
+nnoremap <A-n> :NERDTreeToggle<CR>
+tnoremap <Esc> <C-\><C-n>

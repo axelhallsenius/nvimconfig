@@ -11,40 +11,18 @@
 "neovide specific
 let g:neovide_cursor_animation_length=0.03
 let g:neovide_input_use_logo=v:false
-"let g:neovide_refresh_rate=140
-let neovide_remember_window_size = v:true
+let g:neovide_refresh_rate=60
+
+let g:neovide_cursor_antialiasing=v:true
+let g:neovide_fullscreen=v:true
 
 set termguicolors
-
-"plugin settings
-"tree sitter
-
-""consistent syntax highlighting
-"lua <<EOF
-"require'nvim-treesitter.configs'.setup {
-"  highlight = {
-"    enable = true,
-"    custom_captures = {
-"      ["foo.bar"] = ''Identifier'?????',
-"    },
-"    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-"    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-"    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-"    -- Instead of true it can also be a list of languages
-"    additional_vim_regex_highlighting = false,
-"  },
-"}
-"EOF
-
-"tree sitter based folding
-"set foldmethod=expr
-"set foldexpr=nvim_treesitter#foldexpr()
 
 "coc settings
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
-set encoding=utf-8
+"set encoding=utf-8
 
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -65,12 +43,12 @@ set shortmess+=c
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
-if has("nvim-0.5.0") || has("patch-8.1.1564")
+"if has("nvim-0.5.0") || has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
+set signcolumn=number
+"else
+"  set signcolumn=yes
+"endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
