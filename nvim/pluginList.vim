@@ -36,11 +36,17 @@ Plug 'ctrlpvim/ctrlp.vim'
 "Smooth scrolling so your eyes don't bleed
 Plug 'psliwka/vim-smoothie'
 
+"Proper haskell highlighting
+Plug 'https://github.com/neovimhaskell/haskell-vim.git'
+Plug 'https://github.com/alx741/vim-stylishask'
+
 " -- colorschemes --
 
 Plug 'hzchirs/vim-material'
 
 Plug 'ajmwagar/vim-deus'
+
+Plug 'https://github.com/sblauen/chalk.git'
 
 " -- end --
 

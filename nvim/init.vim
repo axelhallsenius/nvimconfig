@@ -12,11 +12,14 @@ source $HOME/.config/nvim/keys.vim
 
 "colorscheme:
 "set background=dark
-colorscheme deus
-let g:airline_theme='deus'
+colorscheme chalk
+let g:airline_theme='base16_chalk'
 
 "show relative line numbers
 set number
+
+syntax on
+filetype plugin indent on
 
 "tab behaviour
 "set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab

@@ -14,7 +14,6 @@ let g:neovide_input_use_logo=v:false
 let g:neovide_refresh_rate=60
 
 let g:neovide_cursor_antialiasing=v:true
-let g:neovide_fullscreen=v:true
 
 set termguicolors
 
