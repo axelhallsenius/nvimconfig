@@ -12,11 +12,31 @@ source $HOME/.config/nvim/keys.vim
 
 "colorscheme:
 "set background=dark
-colorscheme deus
-let g:airline_theme='deus'
+colorscheme chalk
+let g:airline_theme='base16_chalk'
+highlight! link SignColumn LineNr
 
-"show relative line numbers
+"show line numbers
 set number
 
+syntax on
+filetype plugin indent on
+
 "tab behaviour
-"set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set shiftwidth=4
+set tabstop=4
+set expandtab
+
+"ignore capitals during search, but does not when searching specifically for
+"caps
+set ignorecase
+set smartcase
+
+"no backup files
+set nobackup
+
+"set longer history
+set history=200
+
+set guifont=Fira\ Code:h14
+
