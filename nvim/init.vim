@@ -14,6 +14,7 @@ source $HOME/.config/nvim/keys.vim
 "set background=dark
 colorscheme chalk
 let g:airline_theme='base16_chalk'
+
 highlight! link SignColumn LineNr
 
 "show line numbers
@@ -39,4 +40,3 @@ set nobackup
 set history=200
 
 set guifont=Fira\ Code:h14
-

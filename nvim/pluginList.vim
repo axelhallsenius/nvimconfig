@@ -56,6 +56,4 @@ Plug 'https://github.com/sblauen/chalk.git'
 
 " -- end --
 
-
-
 call plug#end()
