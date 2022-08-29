@@ -27,6 +27,9 @@ Plug 'tpope/vim-fugitive'
 "distraction free mode
 Plug 'junegunn/goyo.vim'
 
+"for prose style line wrapping
+Plug 'preservim/vim-pencil'
+
 "nice looking directory tree
 Plug 'preservim/nerdtree'
 
@@ -35,6 +38,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 "Smooth scrolling so your eyes don't bleed
 Plug 'psliwka/vim-smoothie'
+
+"LaTex functionality
+Plug 'lervag/vimtex'
 
 "Proper haskell highlighting
 Plug 'https://github.com/neovimhaskell/haskell-vim.git'
@@ -49,7 +55,5 @@ Plug 'ajmwagar/vim-deus'
 Plug 'https://github.com/sblauen/chalk.git'
 
 " -- end --
-
-
 
 call plug#end()
