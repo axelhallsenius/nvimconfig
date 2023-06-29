@@ -12,7 +12,7 @@ source $HOME/.config/nvim/keys.vim
 
 "colorscheme:
 "set background=dark
-colorscheme chalk
+colorscheme base16-tomorrow-night-eighties
 let g:airline_theme='base16_chalk'
 
 highlight! link SignColumn LineNr
@@ -39,4 +39,4 @@ set nobackup
 "set longer history
 set history=200
 
-set guifont=Fira\ Code:h14
+set guifont=Fira\ Code:h12

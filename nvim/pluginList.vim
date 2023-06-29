@@ -52,10 +52,16 @@ Plug 'hzchirs/vim-material'
 
 Plug 'ajmwagar/vim-deus'
 
+Plug 'chriskempson/base16-vim'
+
 Plug 'https://github.com/sblauen/chalk.git'
 
 "Syntax highlighting for everything
 Plug 'https://github.com/sheerun/vim-polyglot'
+
+"Syntax highlighting for kitty terminal configuration
+Plug 'fladson/vim-kitty'
+
 
 " -- end --
 
