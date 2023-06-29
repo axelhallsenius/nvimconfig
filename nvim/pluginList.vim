@@ -54,6 +54,9 @@ Plug 'ajmwagar/vim-deus'
 
 Plug 'https://github.com/sblauen/chalk.git'
 
+"Syntax highlighting for everything
+Plug 'https://github.com/sheerun/vim-polyglot'
+
 " -- end --
 
 call plug#end()

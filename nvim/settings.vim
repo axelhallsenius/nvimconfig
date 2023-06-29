@@ -2,6 +2,7 @@
 
 " -- native stuff --
 
+"set spelllang=en_us,sv
 
 " -- plugin stuff --
 

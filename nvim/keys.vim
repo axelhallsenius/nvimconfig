@@ -187,6 +187,7 @@ nmap ä <Plug>(easymotion-overwin-f)
 
 "change ö to : in normal mode, for quick access
 nmap ö :
+nmap ; :
 
 "system clipboard paste and yank
 nnoremap <leader>p "+p
