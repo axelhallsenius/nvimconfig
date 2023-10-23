@@ -178,6 +178,23 @@ nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 " Resume latest coc list.
 "nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
 "/coc
 
 "easymotion - easymove
@@ -197,7 +214,10 @@ vnoremap <leader>P "+P
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 
+"cpp specific: switch between header and implementation
+nmap <leader>h :SwitchSourceHeader<CR>
+nmap <leader>fc :ClangFormatAll<CR>
 
 "Toggle NERDTreeToggle 
-nnoremap <A-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 tnoremap <Esc> <C-\><C-n>

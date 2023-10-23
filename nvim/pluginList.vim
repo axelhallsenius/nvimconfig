@@ -1,5 +1,5 @@
 "This file is for linking plugins for vim-plug to download.
-
+"
 "Directory where vim-plug saves the plugins
 call plug#begin('~/.config/nvim/plugs')
 
@@ -15,7 +15,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "status line
 Plug 'vim-airline/vim-airline'
-
 Plug 'vim-airline/vim-airline-themes'
 
 "move to designated character on screen
@@ -46,14 +45,19 @@ Plug 'lervag/vimtex'
 Plug 'https://github.com/neovimhaskell/haskell-vim.git'
 Plug 'https://github.com/alx741/vim-stylishask'
 
+"Official rust stuff
+Plug 'rust-lang/rust.vim'
+
+"QOL for C++
+Plug 'https://github.com/drichardson/vim-cpp'
+
+"bracket auto pairing
+"Plug 'https://github.com/jiangmiao/auto-pairs'
+
 " -- colorschemes --
-
 Plug 'hzchirs/vim-material'
-
 Plug 'ajmwagar/vim-deus'
-
 Plug 'chriskempson/base16-vim'
-
 Plug 'https://github.com/sblauen/chalk.git'
 
 "Syntax highlighting for everything
@@ -62,6 +66,8 @@ Plug 'https://github.com/sheerun/vim-polyglot'
 "Syntax highlighting for kitty terminal configuration
 Plug 'fladson/vim-kitty'
 
+"indent guides
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " -- end --
 

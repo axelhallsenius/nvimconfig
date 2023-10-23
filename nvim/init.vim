@@ -13,7 +13,7 @@ source $HOME/.config/nvim/keys.vim
 "colorscheme:
 "set background=dark
 colorscheme base16-tomorrow-night-eighties
-let g:airline_theme='base16_chalk'
+let g:airline_theme='base16_tomorrow_night_eighties'
 
 highlight! link SignColumn LineNr
 
@@ -32,11 +32,15 @@ set expandtab
 "caps
 set ignorecase
 set smartcase
+set smartindent
 
 "no backup files
 set nobackup
 
 "set longer history
 set history=200
+
+"removing auto comment
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 set guifont=Fira\ Code:h12
