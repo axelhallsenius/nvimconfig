@@ -6,16 +6,31 @@ call plug#begin('~/.config/nvim/plugs')
 
 
 " -- features --
-
-"wiki functionality
-Plug 'vimwiki/vimwiki'
-
-"autocompletion, etc
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 "status line
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+
+"mason - lsp, lint, and dap package manager
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+
+"Fuzzy searching tool
+Plug 'nvim-lua/plenary.nvim'
+Plug 'BurntSushi/ripgrep'
+Plug 'nvim-telescope/telescope.nvim'
+
+"cmp - autocompletion
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+"snippets
+Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
+Plug 'saadparwaiz1/cmp_luasnip'
 
 "move to designated character on screen
 Plug 'easymotion/vim-easymotion'
@@ -23,51 +38,37 @@ Plug 'easymotion/vim-easymotion'
 "git integration
 Plug 'tpope/vim-fugitive'
 
-"distraction free mode
-Plug 'junegunn/goyo.vim'
-
-"for prose style line wrapping
-Plug 'preservim/vim-pencil'
-
 "nice looking directory tree
 Plug 'preservim/nerdtree'
-
-"fuzzy directory search
-Plug 'ctrlpvim/ctrlp.vim'
-
-"Smooth scrolling so your eyes don't bleed
-Plug 'psliwka/vim-smoothie'
 
 "LaTex functionality
 Plug 'lervag/vimtex'
 
-"Proper haskell highlighting
-Plug 'https://github.com/neovimhaskell/haskell-vim.git'
-Plug 'https://github.com/alx741/vim-stylishask'
+"wiki functionality
+Plug 'vimwiki/vimwiki'
 
-"Official rust stuff
-Plug 'rust-lang/rust.vim'
-
-"QOL for C++
-Plug 'https://github.com/drichardson/vim-cpp'
-
-"bracket auto pairing
-"Plug 'https://github.com/jiangmiao/auto-pairs'
+" -- visual --
+"Smooth scrolling so your eyes don't bleed
+Plug 'psliwka/vim-smoothie'
+"for prose style line wrapping
+Plug 'preservim/vim-pencil'
+"distraction free mode
+Plug 'junegunn/goyo.vim'
+"indent guides
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " -- colorschemes --
 Plug 'hzchirs/vim-material'
 Plug 'ajmwagar/vim-deus'
-Plug 'chriskempson/base16-vim'
+"Plug 'chriskempson/base16-vim'
+Plug 'RRethy/nvim-base16'
 Plug 'https://github.com/sblauen/chalk.git'
 
+" -- highlighting --
 "Syntax highlighting for everything
-Plug 'https://github.com/sheerun/vim-polyglot'
-
+"Plug 'https://github.com/sheerun/vim-polyglot'
 "Syntax highlighting for kitty terminal configuration
 Plug 'fladson/vim-kitty'
-
-"indent guides
-Plug 'lukas-reineke/indent-blankline.nvim'
 
 " -- end --
 

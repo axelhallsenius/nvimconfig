@@ -10,11 +10,6 @@ source $HOME/.config/nvim/keys.vim
 
 "here are some other things for quick access
 
-"colorscheme:
-"set background=dark
-colorscheme base16-tomorrow-night-eighties
-let g:airline_theme='base16_tomorrow_night_eighties'
-
 highlight! link SignColumn LineNr
 
 "show line numbers
@@ -44,3 +39,7 @@ set history=200
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 set guifont=Fira\ Code:h12
+
+lua <<EOF
+require("luaconf")
+EOF
