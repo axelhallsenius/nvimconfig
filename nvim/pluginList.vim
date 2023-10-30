@@ -3,15 +3,26 @@
 "Directory where vim-plug saves the plugins
 call plug#begin('~/.config/nvim/plugs')
 
-
-
 " -- features --
 "status line
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 
+"fuzzy finding
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-telescope/telescope-fzf-native.nvim'
+
+"keybinding explanations
+Plug 'folke/which-key.nvim'
+
+"git stuff
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+
+Plug 'tpope/vim-sleuth'
+Plug 'folke/neodev.nvim'
+
 "mason - lsp, lint, and dap package manager
-Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 
@@ -22,21 +33,30 @@ Plug 'nvim-telescope/telescope.nvim'
 
 "cmp - autocompletion
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
 
-"snippets
 Plug 'L3MON4D3/LuaSnip', {'tag': 'v2.*', 'do': 'make install_jsregexp'}
 Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'rafamadriz/friendly-snippets'
+
+Plug 'hrsh7th/nvim-cmp'
+"Plug 'hrsh7th/cmp-vsnip'
+"Plug 'hrsh7th/vim-vsnip'
+"Plug 'rafamadriz/friendly-snippets'
+
+Plug 'nvim-treesitter/nvim-treesitter'
+
+"bracket auto pairing
+Plug 'windwp/nvim-autopairs'
 
 "move to designated character on screen
 Plug 'easymotion/vim-easymotion'
 
 "git integration
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 
 "nice looking directory tree
 Plug 'preservim/nerdtree'
