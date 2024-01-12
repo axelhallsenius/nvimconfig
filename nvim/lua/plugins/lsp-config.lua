@@ -25,7 +25,7 @@ return {
           "rust_analyzer",
           "svelte",
           "tsserver",
-          "hls",
+--          "hls",
           "html",
           "cssls",
           "jsonls"
@@ -87,9 +87,9 @@ return {
       lspconfig.jsonls.setup({
         capabilities = capabilities
       })
-      lspconfig.hls.setup({
-        capabilities = capabilities
-      })
+      --lspconfig.hls.setup({
+        --capabilities = capabilities
+      --})
       lspconfig.html.setup({
         capabilities = capabilities
       })

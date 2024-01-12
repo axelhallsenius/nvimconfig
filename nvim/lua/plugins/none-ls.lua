@@ -13,6 +13,6 @@ return { -- wraps cli tools for formatting into kinda pseudo linters, to be used
 				null_ls.builtins.diagnostics.eslint_d,
 			},
 		})
-		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+		vim.keymap.set("n", "<leader>=", vim.lsp.buf.format, {})
 	end,
 }
