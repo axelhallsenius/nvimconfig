@@ -36,7 +36,7 @@ require('lualine').setup {
   tabline = {
     lualine_a = {'buffers'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
+    lualine_c = {{'filename', path = 1,}},
     lualine_x = {},
     lualine_y = {},
     lualine_z = {'tabs'}
