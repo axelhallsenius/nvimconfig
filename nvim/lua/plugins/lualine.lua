@@ -38,11 +38,11 @@ return {
       },
       tabline = {
         lualine_a = {'buffers'},
-        lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {'filename'},
+        lualine_b = {}, --{'branch', 'diff', 'diagnostics'},
+        lualine_c = {},
         lualine_x = {},
         lualine_y = {},
-        lualine_z = {'tabs'}
+        lualine_z = {'branch', 'diff', 'diagnostics'}, --{'tabs'}
       },
       winbar = {},
       inactive_winbar = {},
