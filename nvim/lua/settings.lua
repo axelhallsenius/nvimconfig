@@ -9,6 +9,7 @@ vim.cmd("set ignorecase")
 
 
 vim.g.mapleader = " "
+vim.opt.mouse = ""
 
 -- ctrl-direction to move to split. ctrl-Direction to move split itself
 vim.keymap.set('n', '<C-h>', '<C-w>h')
@@ -41,13 +42,24 @@ vim.keymap.set('v', '<C-S-l>', '<C-w>L')
 
 --switch buffers in the tab line
 vim.keymap.set('n', '<A-j>', ':bp<CR>')
-vim.keymap.set('i', '<A-j>', ':bp<CR>')
-vim.keymap.set('v', '<A-j>', ':bp<CR>')
+--vim.keymap.set('i', '<A-j>', ':bp<CR>')
+--vim.keymap.set('v', '<A-j>', ':bp<CR>')
 
 vim.keymap.set('n', '<A-k>', ':bn<CR>')
-vim.keymap.set('i', '<A-k>', ':bn<CR>')
-vim.keymap.set('v', '<A-k>', ':bn<CR>')
+--vim.keymap.set('i', '<A-k>', ':bn<CR>')
+--vim.keymap.set('v', '<A-k>', ':bn<CR>')
 
 vim.keymap.set('n', 'ö', ':')
 vim.keymap.set('n', ';', ':')
 
+
+vim.keymap.set('n', '<leader>p', '"*p')
+vim.keymap.set('n', '<leader>P', '"*P')
+vim.keymap.set('v', '<leader>p', '"*p')
+vim.keymap.set('v', '<leader>P', '"*P')
+
+--why no work?
+vim.keymap.set('n', '<leader>y', '"*y')
+vim.keymap.set('n', '<leader>Y', '"*Y')
+vim.keymap.set('v', '<leader>y', '"*y')
+vim.keymap.set('v', '<leader>Y', '"*Y')
