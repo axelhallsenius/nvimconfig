@@ -70,7 +70,15 @@ return {
         capabilities = capabilities
       })
       lspconfig.ltex.setup({
-        capabilities = capabilities
+        --capabilities = capabilities,
+        settings = {
+          ltex = {
+            enabled = { "latex", "tex", "bib", "markdown", },
+            language = "auto",
+            diagnosticSeverity = "information",
+            sentenceCacheSize = 2000,
+          },
+        },
       })
       lspconfig.marksman.setup({
         capabilities = capabilities

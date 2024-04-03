@@ -8,6 +8,7 @@ return {
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
         disabled_filetypes = {
+          'NVimTree',
           statusline = {},
           winbar = {},
         },
@@ -22,7 +23,7 @@ return {
       },
       sections = {
         lualine_a = {'mode'},
-        lualine_b = {}, --{'branch', 'diff', 'diagnostics'},
+        lualine_b = {'branch', 'diff', 'diagnostics'},
         lualine_c = {}, --{'filename'},
         lualine_x = {'filetype'}, --{'encoding', 'fileformat', 'filetype'},
         lualine_y = {'progress'},
@@ -36,14 +37,14 @@ return {
         lualine_y = {},
         lualine_z = {}
       },
-      tabline = {
-        lualine_a = {'buffers'},
-        lualine_b = {}, --{'branch', 'diff', 'diagnostics'},
-        lualine_c = {},
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {'branch', 'diff', 'diagnostics'}, --{'tabs'}
-      },
+      -- tabline = {
+      --   lualine_a = {}, --{'buffers'},
+      --   lualine_b = {}, --{'branch', 'diff', 'diagnostics'},
+      --   lualine_c = {},
+      --   lualine_x = {},
+      --   lualine_y = {},
+      --   lualine_z = {'branch', 'diff', 'diagnostics'}, --{'tabs'}
+      -- },
       winbar = {},
       inactive_winbar = {},
       extensions = {}
