@@ -7,107 +7,33 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
+    dependencies = { "williamboman/mason.nvim"},
     config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls",
-          "angularls",
-          "arduino_language_server",
-          "bashls",
-          "clangd",
-          "cmake",
-          "dockerls",
-          "docker_compose_language_service",
-          "golangci_lint_ls",
-          "ltex",
-          "marksman",
-          "pyright",
-          "rust_analyzer",
-          "svelte",
-          "tsserver",
---          "hls",
-          "html",
-          "cssls",
-          "jsonls"
-        }
+      require("mason-lspconfig").setup()
+      require("mason-lspconfig").setup_handlers({
+        -- The first entry (without a key) will be the default handler
+        -- and will be called for each installed server that doesn't have
+        -- a dedicated handler.
+        function (server_name) -- default handler (optional)
+          require("lspconfig")[server_name].setup({})
+        end,
+        -- Next, you can provide a dedicated handler for specific servers.
+        -- For example, a handler override for the `rust_analyzer`:
+        -- ["rust_analyzer"] = function ()
+        --   require("rust-tools").setup {}
+        -- end
       })
-    end
+    end,
   },
   {
     "neovim/nvim-lspconfig",
-    config = function()
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({
-        capabilities = capabilities
+    config = function ()
+      vim.diagnostic.config({
+        virtual_text = false
       })
-      lspconfig.tsserver.setup({
-        capabilities = capabilities
-      })
-      lspconfig.angularls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.arduino_language_server.setup({
-        capabilities = capabilities
-      })
-      lspconfig.bashls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.clangd.setup({
-        capabilities = capabilities
-      })
-      lspconfig.cmake.setup({
-        capabilities = capabilities
-      })
-      lspconfig.dockerls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.docker_compose_language_service.setup({
-        capabilities = capabilities
-      })
-      lspconfig.golangci_lint_ls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.ltex.setup({
-        --capabilities = capabilities,
-        settings = {
-          ltex = {
-            enabled = { "latex", "tex", "bib", "markdown", },
-            language = "auto",
-            diagnosticSeverity = "information",
-            sentenceCacheSize = 2000,
-          },
-        },
-      })
-      lspconfig.marksman.setup({
-        capabilities = capabilities
-      })
-      lspconfig.pyright.setup({
-        capabilities = capabilities
-      })
-      lspconfig.rust_analyzer.setup({
-        capabilities = capabilities
-      })
-      lspconfig.svelte.setup({
-        capabilities = capabilities
-      })
-      lspconfig.jsonls.setup({
-        capabilities = capabilities
-      })
-      --lspconfig.hls.setup({
-        --capabilities = capabilities
-      --})
-      lspconfig.html.setup({
-        capabilities = capabilities
-      })
-      lspconfig.cssls.setup({
-        capabilities = capabilities
-      })
-
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-      vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
+      -- Show line diagnostics automatically in hover window
+      vim.o.updatetime = 250
+      vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
     end
   },
 }
