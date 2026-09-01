@@ -24,7 +24,7 @@ return {
       sections = {
         lualine_a = {'mode'},
         lualine_b = {'branch', 'diff', 'diagnostics'},
-        lualine_c = {'filename',}, --{'filename'},
+        lualine_c = {}, --{'filename'},
         lualine_x = {'filetype'}, --{'encoding', 'fileformat', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {'location'}
@@ -37,14 +37,14 @@ return {
       --  lualine_y = {},
       --  lualine_z = {}
       --},
-      -- tabline = {
-      --   lualine_a = {}, --{'buffers'},
-      --   lualine_b = {}, --{'branch', 'diff', 'diagnostics'},
-      --   lualine_c = {},
-      --   lualine_x = {},
-      --   lualine_y = {},
-      --   lualine_z = {'branch', 'diff', 'diagnostics'}, --{'tabs'}
-      -- },
+      tabline = {
+        lualine_a = {'branch'}, --'location'},
+        lualine_b = {'buffers'}, --{'branch', 'diff', 'diagnostics'},
+        lualine_c = {},
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {}, --'branch', 'diff', 'diagnostics'}, --{'tabs'}
+      },
       winbar = {},
       inactive_winbar = {},
       extensions = {}

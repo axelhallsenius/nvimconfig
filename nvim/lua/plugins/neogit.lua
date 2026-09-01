@@ -6,6 +6,9 @@ return {
       "sindrets/diffview.nvim", -- optional - Diff integration
       "nvim-telescope/telescope.nvim", -- optional
     },
-    config = true,
+    cmd = "Neogit",
+    keys = {
+      { "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI"}
+    }
   },
 }
